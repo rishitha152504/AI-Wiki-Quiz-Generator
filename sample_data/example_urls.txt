@@ -1,0 +1,31 @@
+Sample Wikipedia URLs for Testing
+
+1. Alan Turing
+   https://en.wikipedia.org/wiki/Alan_Turing
+
+2. Quantum Computing
+   https://en.wikipedia.org/wiki/Quantum_computing
+
+3. Machine Learning
+   https://en.wikipedia.org/wiki/Machine_learning
+
+4. Photosynthesis
+   https://en.wikipedia.org/wiki/Photosynthesis
+
+5. Renaissance
+   https://en.wikipedia.org/wiki/Renaissance
+
+6. Artificial Intelligence
+   https://en.wikipedia.org/wiki/Artificial_intelligence
+
+7. Black Holes
+   https://en.wikipedia.org/wiki/Black_hole
+
+8. DNA
+   https://en.wikipedia.org/wiki/DNA
+
+9. World War II
+   https://en.wikipedia.org/wiki/World_War_II
+
+10. Climate Change
+    https://en.wikipedia.org/wiki/Climate_change

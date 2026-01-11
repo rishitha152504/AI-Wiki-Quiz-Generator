@@ -1,0 +1,52 @@
+================================================================================
+                    QUICK: RESTART BACKEND WITH POSTGRESQL
+================================================================================
+
+STEP 1: Stop Backend (If Running)
+================================================================================
+1. Find backend window (python run.py)
+2. Press Ctrl+C
+3. Wait for prompt
+
+STEP 2: Install PostgreSQL Driver (If Needed)
+================================================================================
+Open PowerShell:
+
+cd "C:\Users\dines\OneDrive\Documents\Kln doucments\Rishitha\QUIZ\backend"
+.\venv\Scripts\activate
+pip install psycopg2-binary
+
+STEP 3: Start Backend
+================================================================================
+cd "C:\Users\dines\OneDrive\Documents\Kln doucments\Rishitha\QUIZ\backend"
+.\venv\Scripts\activate
+python run.py
+
+STEP 4: Check Connection
+================================================================================
+You should see:
+✅ Using PostgreSQL database: localhost:5432/wiki_quiz_db
+INFO:     Uvicorn running on http://0.0.0.0:8000
+
+Test: http://localhost:8000/api/health
+Should see: {"status":"healthy","database":"connected"}
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+Error: "ModuleNotFoundError: psycopg2"
+  → Run: pip install psycopg2-binary
+
+Error: "password authentication failed"
+  → Check password in .env is correct (should be 1234)
+
+Error: "could not connect to server"
+  → Check PostgreSQL service is running (services.msc)
+
+Error: "database does not exist"
+  → Create database: wiki_quiz_db (use pgAdmin)
+
+================================================================================
+For detailed instructions, see: RESTART_BACKEND_POSTGRESQL.md
+================================================================================

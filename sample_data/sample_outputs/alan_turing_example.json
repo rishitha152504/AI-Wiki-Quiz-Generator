@@ -1,0 +1,103 @@
+{
+  "id": 1,
+  "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+  "title": "Alan Turing",
+  "summary": "Alan Mathison Turing OBE FRS was a British mathematician, computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist. Turing was highly influential in the development of theoretical computer science, providing a formalisation of the concepts of algorithm and computation with the Turing machine, which can be considered a model of a general-purpose computer.",
+  "key_entities": {
+    "people": ["Alan Turing", "Alonzo Church"],
+    "organizations": ["University of Cambridge", "Bletchley Park", "National Physical Laboratory"],
+    "locations": ["United Kingdom", "Maida Vale", "Manchester"]
+  },
+  "sections": [
+    "Early life and education",
+    "Career and research",
+    "Cryptanalysis",
+    "Early computers and the Turing test",
+    "Pattern formation and mathematical biology",
+    "Prosecution for indecency",
+    "Death",
+    "Legacy and tributes"
+  ],
+  "quiz": [
+    {
+      "question": "Where did Alan Turing study?",
+      "options": [
+        "Harvard University",
+        "Cambridge University",
+        "Oxford University",
+        "Princeton University"
+      ],
+      "answer": "Cambridge University",
+      "difficulty": "easy",
+      "explanation": "Alan Turing studied at King's College, Cambridge, where he was awarded first-class honours in mathematics."
+    },
+    {
+      "question": "What was Alan Turing's main contribution during World War II?",
+      "options": [
+        "Atomic research",
+        "Breaking the Enigma code",
+        "Inventing radar",
+        "Developing jet engines"
+      ],
+      "answer": "Breaking the Enigma code",
+      "difficulty": "medium",
+      "explanation": "Turing worked at Bletchley Park and played a crucial role in breaking the Enigma code used by the German military."
+    },
+    {
+      "question": "What is the Turing machine?",
+      "options": [
+        "A physical computer built by Turing",
+        "A mathematical model of computation",
+        "A code-breaking device",
+        "A type of encryption machine"
+      ],
+      "answer": "A mathematical model of computation",
+      "difficulty": "medium",
+      "explanation": "The Turing machine is a theoretical model that formalizes the concept of algorithm and computation."
+    },
+    {
+      "question": "What is the Turing test designed to evaluate?",
+      "options": [
+        "Computer processing speed",
+        "Machine intelligence and ability to exhibit human-like behavior",
+        "Encryption strength",
+        "Mathematical problem-solving"
+      ],
+      "answer": "Machine intelligence and ability to exhibit human-like behavior",
+      "difficulty": "hard",
+      "explanation": "The Turing test evaluates whether a machine can exhibit intelligent behavior indistinguishable from that of a human."
+    },
+    {
+      "question": "Where did Turing work on early computer development?",
+      "options": [
+        "MIT",
+        "National Physical Laboratory",
+        "IBM",
+        "Bell Labs"
+      ],
+      "answer": "National Physical Laboratory",
+      "difficulty": "medium",
+      "explanation": "Turing worked at the National Physical Laboratory where he designed the Automatic Computing Engine (ACE)."
+    },
+    {
+      "question": "What field did Turing contribute to in his later years?",
+      "options": [
+        "Quantum physics",
+        "Mathematical biology and pattern formation",
+        "Nuclear engineering",
+        "Aerospace engineering"
+      ],
+      "answer": "Mathematical biology and pattern formation",
+      "difficulty": "hard",
+      "explanation": "In his later years, Turing worked on mathematical biology, particularly on morphogenesis and pattern formation."
+    }
+  ],
+  "related_topics": [
+    "Cryptography",
+    "Enigma machine",
+    "Computer science history",
+    "Artificial intelligence",
+    "Turing completeness"
+  ],
+  "created_at": "2024-01-15T10:30:00"
+}

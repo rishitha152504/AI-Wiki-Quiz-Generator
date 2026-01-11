@@ -1,0 +1,31 @@
+================================================================================
+                    QUICK: VIEW DATABASE URLS
+================================================================================
+
+METHOD 1: Python Script (Best for Detailed View)
+================================================================================
+cd backend
+.\venv\Scripts\activate
+python view_database.py
+
+Shows formatted table with all URLs
+
+METHOD 2: Frontend (Easiest)
+================================================================================
+1. Go to: http://localhost:3000
+2. Click "Past Quizzes" tab
+3. See table with all URLs
+
+METHOD 3: API Endpoint (For Developers)
+================================================================================
+Browser: http://localhost:8000/api/quiz/history
+Or: http://localhost:8000/api/quiz/urls
+
+METHOD 4: PostgreSQL Direct Query
+================================================================================
+psql -U postgres -d wiki_quiz_db
+SELECT id, url, title, created_at FROM wiki_articles ORDER BY created_at DESC;
+
+================================================================================
+For detailed guide, see: VIEW_DATABASE_GUIDE.md
+================================================================================

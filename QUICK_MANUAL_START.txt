@@ -1,0 +1,63 @@
+================================================================================
+                    QUICK MANUAL BACKEND START
+================================================================================
+
+Copy and paste these commands ONE BY ONE in PowerShell:
+
+================================================================================
+STEP 1: Open PowerShell
+================================================================================
+Press Windows key → Type "PowerShell" → Enter
+
+================================================================================
+STEP 2: Navigate to Backend
+================================================================================
+cd "C:\Users\dines\OneDrive\Documents\Kln doucments\Rishitha\QUIZ\backend"
+
+================================================================================
+STEP 3: Activate Virtual Environment
+================================================================================
+.\venv\Scripts\activate
+
+You should see (venv) at the start of prompt
+
+================================================================================
+STEP 4: Start Server
+================================================================================
+python run.py
+
+You should see:
+INFO:     Uvicorn running on http://0.0.0.0:8000
+
+================================================================================
+STEP 5: Test It
+================================================================================
+Open browser: http://localhost:8000/api/health
+
+Should see: {"status":"healthy",...}
+
+================================================================================
+TROUBLESHOOTING
+================================================================================
+
+If "python is not recognized":
+  → Install Python from python.org
+  → Check "Add Python to PATH" during installation
+  → Restart computer
+
+If "venv\Scripts\activate" not found:
+  → Create venv: python -m venv venv
+  → Then activate: .\venv\Scripts\activate
+
+If "Module not found":
+  → Install dependencies: pip install -r requirements.txt
+  → Make sure venv is activated (see (venv) in prompt)
+
+If "GEMINI_API_KEY not set":
+  → Create .env file: notepad .env
+  → Add: GEMINI_API_KEY=your_api_key_here
+  → Save and restart server
+
+================================================================================
+For detailed help, see: MANUAL_BACKEND_SETUP.md
+================================================================================
