@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.css';
 
+// Use environment variable for API URL, fallback to localhost for development
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
 function App() {
@@ -75,7 +76,7 @@ function App() {
       try {
         await axios.get(`${API_BASE_URL}/api/health`, { timeout: 2000 });
       } catch (healthErr) {
-        setError(`Cannot connect to backend at ${API_BASE_URL}. Please ensure the backend server is running on port 8000.`);
+        setError(`Cannot connect to backend at ${API_BASE_URL}. Please ensure the backend server is running.`);
         setLoading(false);
         return;
       }
@@ -93,7 +94,7 @@ function App() {
     } catch (err) {
       // Show more detailed error message
       if (err.code === 'ECONNREFUSED' || err.message.includes('Network Error')) {
-        setError(`Cannot connect to backend at ${API_BASE_URL}. Please ensure the backend server is running on port 8000.`);
+        setError(`Cannot connect to backend at ${API_BASE_URL}. Please ensure the backend server is running.`);
       } else {
         const errorMessage = err.response?.data?.detail || 
                             err.response?.data?.message || 

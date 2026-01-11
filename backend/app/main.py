@@ -27,21 +27,46 @@ app = FastAPI(
     version="1.0.0"
 )
 
-# CORS middleware - Allow all localhost ports for development
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://localhost:5173",
-        "http://127.0.0.1:3000",
-        "http://127.0.0.1:5173",
-        "http://localhost:3001",
-        "http://localhost:8080",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# CORS middleware - Configure based on environment
+# In production, allow all origins (you can restrict to specific domains via ALLOWED_ORIGINS env var)
+if os.getenv("ALLOWED_ORIGINS"):
+    # Use specific origins from environment variable (comma-separated)
+    allowed_origins = [origin.strip() for origin in os.getenv("ALLOWED_ORIGINS").split(",") if origin.strip()]
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=allowed_origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+else:
+    # Default: allow localhost for development, or all origins in production
+    if os.getenv("ENVIRONMENT") == "production":
+        # In production, allow all origins using regex
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origin_regex=r".*",  # Allow all origins
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
+    else:
+        # Development: allow common localhost ports
+        allowed_origins = [
+            "http://localhost:3000",
+            "http://localhost:5173",
+            "http://127.0.0.1:3000",
+            "http://127.0.0.1:5173",
+            "http://localhost:3001",
+            "http://localhost:8080",
+        ]
+        app.add_middleware(
+            CORSMiddleware,
+            allow_origins=allowed_origins,
+            allow_credentials=True,
+            allow_methods=["*"],
+            allow_headers=["*"],
+        )
 
 # Initialize services
 scraper = WikipediaScraper()
