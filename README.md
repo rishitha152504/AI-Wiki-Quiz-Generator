@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # AI-Wiki-Quiz-Generator
-Built a Frontend UI and an API in Python (FastAPI/Django) that accepts a Wikipedia article URL as input and automatically generates a quiz based on the article content using a Large Language Model (LLM).
-=======
-# Wiki Quiz App
 
 A full-stack application that generates quizzes from Wikipedia articles using Large Language Models (LLM). The system scrapes Wikipedia content, processes it with Google Gemini API via LangChain, and stores the generated quizzes in a PostgreSQL database.
 
@@ -350,5 +346,5 @@ This project is open source and available for educational purposes.
 
 ## Author
 
-Wiki Quiz App - Built with FastAPI, React, and Google Gemini
->>>>>>> e1a21d7 (Initial commit - AI Wiki Quiz Generator)
+AI-Wiki-Quiz-Generator - Built with FastAPI, React, and Google Gemini
+
